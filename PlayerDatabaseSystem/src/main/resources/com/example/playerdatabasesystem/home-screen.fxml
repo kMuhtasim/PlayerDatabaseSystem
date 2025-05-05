@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.playerdatabasesystem.HelloController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab onSelectionChanged="#onSearchByNameButtonClick" text="Search Players">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutX="-1.0" prefHeight="568.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab onSelectionChanged="#onSearchByNameButtonClick" text="By Name">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="17.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+                                          <TextField fx:id="playerName" layoutX="59.0" layoutY="14.0" onKeyTyped="#onSearchByNameButtonClick" prefHeight="26.0" prefWidth="303.0" />
+                                          <TableView fx:id="searchByNameTable" layoutX="17.0" layoutY="52.0" prefHeight="472.0" prefWidth="966.0">
+                                            <columns>
+                                              <TableColumn fx:id="searchByNameName" prefWidth="130.0" text="Name" />
+                                              <TableColumn fx:id="searchByNameCountry" prefWidth="173.0" text="Country" />
+                                                <TableColumn fx:id="searchByNameAge" prefWidth="72.0" text="Age" />
+                                                <TableColumn fx:id="searchByNameHeight" prefWidth="75.0" text="Height" />
+                                                <TableColumn fx:id="searchByNameClub" prefWidth="200.0" text="Club" />
+                                                <TableColumn fx:id="searchByNamePosition" prefWidth="100.0" text="Position" />
+                                                <TableColumn fx:id="searchByNameJersey" prefWidth="100.0" text="Jersey Number" />
+                                                <TableColumn fx:id="searchByNameSalary" prefWidth="98.0" text="Weekly Salary" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="By Club &amp; Country">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="searchByCCTable" layoutX="14.0" layoutY="46.0" prefHeight="472.0" prefWidth="966.0">
+                                             <columns>
+                                                <TableColumn fx:id="searchByCCName" prefWidth="130.0" text="Name" />
+                                                <TableColumn fx:id="searchByCCCountry" prefWidth="173.0" text="Country" />
+                                                <TableColumn fx:id="searchByCCAge" prefWidth="72.0" text="Age" />
+                                                <TableColumn fx:id="searchByCCHeight" prefWidth="75.0" text="Height" />
+                                                <TableColumn fx:id="searchByCCClub" prefWidth="200.0" text="Club" />
+                                                <TableColumn fx:id="searchByCCPosition" prefWidth="100.0" text="Position" />
+                                                <TableColumn fx:id="searchByCCJersey" prefWidth="100.0" text="Jersey Number" />
+                                                <TableColumn fx:id="searchByCCSalary" prefWidth="98.0" text="Weekly Salary" />
+                                             </columns>
+                                          </TableView>
+                                          <Text layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" />
+                                          <TextField fx:id="playerCountry" layoutX="66.0" layoutY="10.0" onKeyTyped="#onSearchByCCButtonClick" prefHeight="26.0" prefWidth="303.0" />
+                                          <Text layoutX="384.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club:" />
+                                          <TextField fx:id="playerClub" layoutX="418.0" layoutY="10.0" onKeyTyped="#onSearchByCCButtonClick" prefHeight="26.0" prefWidth="303.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="By Position">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position:" wrappingWidth="53.1748046875" />
+                                          <TextField fx:id="playerPosition" layoutX="67.0" layoutY="12.0" onKeyTyped="#onSearchByPositionButtonClick" prefHeight="26.0" prefWidth="303.0" />
+                                          <TableView fx:id="searchByPositionTable" layoutX="14.0" layoutY="47.0" prefHeight="472.0" prefWidth="966.0">
+                                             <columns>
+                                                <TableColumn fx:id="searchByPositionName" prefWidth="130.0" text="Name" />
+                                                <TableColumn fx:id="searchByPositionCountry" prefWidth="173.0" text="Country" />
+                                                <TableColumn fx:id="searchByPositionAge" prefWidth="72.0" text="Age" />
+                                                <TableColumn fx:id="searchByPositionHeight" prefWidth="75.0" text="Height" />
+                                                <TableColumn fx:id="searchByPositionClub" prefWidth="200.0" text="Club" />
+                                                <TableColumn fx:id="searchByPositionPosition" prefWidth="100.0" text="Position" />
+                                                <TableColumn fx:id="searchByPositionJersey" prefWidth="100.0" text="Jersey Number" />
+                                                <TableColumn fx:id="searchByPositionSalary" prefWidth="98.0" text="Weekly Salary" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="By Salary Range">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="17.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lower Limit:" wrappingWidth="69.1748046875" />
+                                          <TextField fx:id="lowerLimit" layoutX="87.0" layoutY="10.0" onKeyTyped="#onSearchBySalaryRangeButtonClick" prefHeight="26.0" prefWidth="303.0" />
+                                          <Text layoutX="405.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper Limit:" wrappingWidth="69.1748046875" />
+                                          <TextField fx:id="upperLimit" layoutX="474.0" layoutY="10.0" onKeyTyped="#onSearchBySalaryRangeButtonClick" prefHeight="26.0" prefWidth="303.0" />
+                                          <TableView fx:id="searchBySalaryRangeTable" layoutX="17.0" layoutY="51.0" prefHeight="472.0" prefWidth="966.0">
+                                             <columns>
+                                                <TableColumn fx:id="searchBySalaryRangeName" prefWidth="130.0" text="Name" />
+                                                <TableColumn fx:id="searchBySalaryRangeCountry" prefWidth="173.0" text="Country" />
+                                                <TableColumn fx:id="searchBySalaryRangeAge" prefWidth="72.0" text="Age" />
+                                                <TableColumn fx:id="searchBySalaryRangeHeight" prefWidth="75.0" text="Height" />
+                                                <TableColumn fx:id="searchBySalaryRangeClub" prefWidth="200.0" text="Club" />
+                                                <TableColumn fx:id="searchBySalaryRangePosition" prefWidth="100.0" text="Position" />
+                                                <TableColumn fx:id="searchBySalaryRangeJersey" prefWidth="100.0" text="Jersey Number" />
+                                                <TableColumn fx:id="searchBySalaryRangeSalary" prefWidth="98.0" text="Weekly Salary" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab onSelectionChanged="#onCountryWiseCount" text="Country-wise Player Count">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="countryWiseCountTable" layoutX="14.0" layoutY="14.0" prefHeight="506.0" prefWidth="974.0">
+                                            <columns>
+                                              <TableColumn fx:id="countryWiseCountCountry" prefWidth="480.0" text="Country" />
+                                              <TableColumn fx:id="countryWiseCountCount" minWidth="0.0" prefWidth="480.0" text="Player Count" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab onSelectionChanged="#onClubNameEntered" text="Search Clubs">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane layoutY="52.0" prefHeight="518.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Maximum Salary">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="searchByClubSalaryTable" layoutX="17.0" layoutY="13.0" prefHeight="460.0" prefWidth="966.0">
+                                             <columns>
+                                                <TableColumn fx:id="searchByClubSalaryName" prefWidth="130.0" text="Name" />
+                                                <TableColumn fx:id="searchByClubSalaryCountry" prefWidth="173.0" text="Country" />
+                                                <TableColumn fx:id="searchByClubSalaryAge" prefWidth="72.0" text="Age" />
+                                                <TableColumn fx:id="searchByClubSalaryHeight" prefWidth="75.0" text="Height" />
+                                                <TableColumn fx:id="searchByClubSalaryClub" prefWidth="200.0" text="Club" />
+                                                <TableColumn fx:id="searchByClubSalaryPosition" prefWidth="100.0" text="Position" />
+                                                <TableColumn fx:id="searchByClubSalaryJersey" prefWidth="100.0" text="Jersey Number" />
+                                                <TableColumn fx:id="searchByClubSalarySalary" prefWidth="98.0" text="Weekly Salary" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Maximum Age">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="searchByClubAgeTable" layoutX="16.0" layoutY="14.0" prefHeight="458.0" prefWidth="968.0">
+                                             <columns>
+                                                <TableColumn fx:id="searchByClubAgeName" prefWidth="130.0" text="Name" />
+                                                <TableColumn fx:id="searchByClubAgeCountry" prefWidth="173.0" text="Country" />
+                                                <TableColumn fx:id="searchByClubAgeAge" prefWidth="72.0" text="Age" />
+                                                <TableColumn fx:id="searchByClubAgeHeight" prefWidth="75.0" text="Height" />
+                                                <TableColumn fx:id="searchByClubAgeClub" prefWidth="200.0" text="Club" />
+                                                <TableColumn fx:id="searchByClubAgePosition" prefWidth="100.0" text="Position" />
+                                                <TableColumn fx:id="searchByClubAgeJersey" prefWidth="100.0" text="Jersey Number" />
+                                                <TableColumn fx:id="searchByClubAgeSalary" prefWidth="98.0" text="Weekly Salary" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Maximum Height">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="searchByClubHeightTable" layoutX="17.0" layoutY="13.0" prefHeight="460.0" prefWidth="966.0">
+                                             <columns>
+                                                <TableColumn fx:id="searchByClubHeightName" prefWidth="130.0" text="Name" />
+                                                <TableColumn fx:id="searchByClubHeightCountry" prefWidth="173.0" text="Country" />
+                                                <TableColumn fx:id="searchByClubHeightAge" prefWidth="72.0" text="Age" />
+                                                <TableColumn fx:id="searchByClubHeightHeight" prefWidth="75.0" text="Height" />
+                                                <TableColumn fx:id="searchByClubHeightClub" prefWidth="200.0" text="Club" />
+                                                <TableColumn fx:id="searchByClubHeightPosition" prefWidth="100.0" text="Position" />
+                                                <TableColumn fx:id="searchByClubHeightJersey" prefWidth="100.0" text="Jersey Number" />
+                                                <TableColumn fx:id="searchByClubHeightSalary" prefWidth="98.0" text="Weekly Salary" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Total Yearly Salary">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="totalYearlySalaryLabel" layoutX="23.0" layoutY="22.0" text="Please enter a club name">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club:" wrappingWidth="30.412109375" />
+                        <TextField fx:id="clubName" layoutX="48.0" layoutY="14.0" onKeyTyped="#onClubNameEntered" prefHeight="26.0" prefWidth="325.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Add Player">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="28.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+                        <Text layoutX="28.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" />
+                        <Text layoutX="28.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age:" />
+                        <Text layoutX="28.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" />
+                        <Text layoutX="28.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club:" />
+                        <Text layoutX="28.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position:" />
+                        <Text layoutX="28.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jersey Number:" />
+                        <Text layoutX="28.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary:" />
+                        <TextField fx:id="nameAdd" layoutX="120.0" layoutY="30.0" prefHeight="26.0" prefWidth="260.0" />
+                        <TextField fx:id="countryAdd" layoutX="120.0" layoutY="62.0" prefHeight="26.0" prefWidth="260.0" />
+                        <TextField fx:id="ageAdd" layoutX="120.0" layoutY="92.0" prefHeight="26.0" prefWidth="260.0" />
+                        <TextField fx:id="heightAdd" layoutX="120.0" layoutY="123.0" prefHeight="26.0" prefWidth="260.0" />
+                        <TextField fx:id="clubAdd" layoutX="120.0" layoutY="154.0" prefHeight="26.0" prefWidth="260.0" />
+                        <TextField fx:id="positionAdd" layoutX="120.0" layoutY="184.0" prefHeight="26.0" prefWidth="260.0" />
+                        <TextField fx:id="jerseyAdd" layoutX="120.0" layoutY="215.0" prefHeight="26.0" prefWidth="260.0" />
+                        <TextField fx:id="salaryAdd" layoutX="120.0" layoutY="247.0" prefHeight="26.0" prefWidth="260.0" />
+                        <Button layoutX="212.0" layoutY="297.0" mnemonicParsing="false" onAction="#onAddPlayerButtonClick" text="Add Player" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#openLoginWindow" text="Login as Club">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

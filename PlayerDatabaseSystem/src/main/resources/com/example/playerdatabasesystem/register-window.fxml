@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/22.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.playerdatabasesystem.RegisterWindow">
+   <children>
+      <Text layoutX="90.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club Name:" />
+      <TextField fx:id="username" layoutX="167.0" layoutY="62.0" />
+      <Text layoutX="93.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <PasswordField fx:id="password" layoutX="167.0" layoutY="101.0" />
+      <Text layoutX="54.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password" />
+      <PasswordField fx:id="confirmPassword" layoutX="167.0" layoutY="138.0" />
+      <Button layoutX="146.0" layoutY="202.0" mnemonicParsing="false" onAction="#onRegisterButtonClicked" text="Confirm Registration" />
+   </children>
+</AnchorPane>

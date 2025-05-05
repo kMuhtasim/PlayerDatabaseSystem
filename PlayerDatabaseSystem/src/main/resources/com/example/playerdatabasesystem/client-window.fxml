@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.playerdatabasesystem.ClientWindow">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab onSelectionChanged="#filterByName" text="My Players">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#filterByName" onMouseEntered="#filterByName" onMouseExited="#filterByName" onMouseMoved="#filterByName" onMousePressed="#filterByName" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="myTable" layoutX="17.0" layoutY="83.0" onMouseClicked="#filterByName" onMouseEntered="#filterByName" onMouseExited="#filterByName" onMouseMoved="#filterByName" onMousePressed="#filterByName" prefHeight="472.0" prefWidth="866.0">
+                           <columns>
+                              <TableColumn fx:id="myName" prefWidth="130.0" text="Name" />
+                              <TableColumn fx:id="myCountry" prefWidth="175.0" text="Country" />
+                              <TableColumn fx:id="myAge" prefWidth="75.0" text="Age" />
+                              <TableColumn fx:id="myHeight" prefWidth="75.0" text="Height" />
+                              <TableColumn fx:id="myClub" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" resizable="false" text="Club" />
+                              <TableColumn fx:id="myPosition" prefWidth="100.0" text="Position" />
+                              <TableColumn fx:id="myJersey" prefWidth="100.0" text="Jersey Number" />
+                              <TableColumn fx:id="mySalary" prefWidth="110.0" text="Weekly Salary" />
+                              <TableColumn fx:id="myAction" prefWidth="83.0" text="Action" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="17.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Name:" />
+                        <TextField fx:id="filterByNameText" layoutX="106.0" layoutY="30.0" onAction="#filterByName" onKeyTyped="#filterByName" prefHeight="26.0" prefWidth="220.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab onSelectionChanged="#filterByNameBuy" text="Buy Players">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#filterByNameBuy" onMouseEntered="#filterByNameBuy" onMouseExited="#filterByNameBuy" onMouseMoved="#filterByNameBuy" onMousePressed="#filterByNameBuy" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="myTableBuy" layoutX="17.0" layoutY="83.0" onMouseClicked="#filterByNameBuy" onMouseEntered="#filterByNameBuy" onMouseExited="#filterByNameBuy" onMouseMoved="#filterByNameBuy" onMousePressed="#filterByNameBuy" prefHeight="472.0" prefWidth="866.0">
+                           <columns>
+                              <TableColumn fx:id="myNameBuy" prefWidth="130.0" text="Name" />
+                              <TableColumn fx:id="myCountryBuy" prefWidth="100.0" text="Country" />
+                              <TableColumn fx:id="myAgeBuy" prefWidth="70.0" text="Age" />
+                              <TableColumn fx:id="myHeightBuy" prefWidth="70.0" text="Height" />
+                              <TableColumn fx:id="myClubBuy" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" text="Club" />
+                              <TableColumn fx:id="myPositionBuy" minWidth="0.0" text="Position" />
+                              <TableColumn fx:id="myJerseyBuy" prefWidth="100.0" text="Jersey Number" />
+                              <TableColumn fx:id="mySalaryBuy" prefWidth="90.0" text="Weekly Salary" />
+                              <TableColumn fx:id="myActionBuy" text="Action" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="17.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Name:" />
+                        <TextField fx:id="filterByNameTextBuy" layoutX="106.0" layoutY="30.0" onAction="#filterByNameBuy" onKeyTyped="#filterByNameBuy" onMouseEntered="#filterByNameBuy" prefHeight="26.0" prefWidth="220.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab onSelectionChanged="#exit" text="Exit">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
